@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <a href="index.html" class="navbar-brand">
+            <i class="icon ion-md-planet"></i>
+          </a>
+
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Articles</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Videos</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Snippets</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Guides</a>
+            </li>
+          </ul>
+
+          <div class="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <script async>
+      const selectElement = (element) => {
+        return document.querySelector(element);
+      };
+
+      selectElement(".hamburger").addEventListener("click", () => {
+        console.log("this");
+        selectElement(".hamburger").classList.toggle("active");
+        selectElement(".nav-list").classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
