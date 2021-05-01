@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: hsl(233, 47%, 7%);
+  --card-background: hsl(244, 38%, 16%);
+  --violet-accent: hsl(277, 64%, 61%);
+  --main-heading-text-color: hsl(0, 0%, 100%);
+  --main-heading-font-size: 2rem;
+  --main-paragraph-text-color: hsla(0, 0%, 100%, 0.75);
+  --main-stats-text-color: hsla(0, 0%, 100%, 0.6);
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.attribution {
+  width: 1145px;
+  height: 450px;
+  display: flex;
+  /* overflow: hidden; */
+  background-color: var(--card-background);
+}
+
+.content {
+  padding: 4.7em 7em 3em 5em;
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image {
+  background-image: url(images/image-header-desktop.jpg);
+  background-size: cover;
+  flex-basis: 50%;
+  background-color: rgba(170, 91, 219, 0.75);
+  background-blend-mode: multiply;
+}
+
+.main-heading {
+  color: var(--main-heading-text-color);
+  font-weight: 700;
+  font-size: var(--main-heading-font-size);
+  font-family: "Inter", sans-serif;
+}
+
+.paragraph {
+  margin-top: 2rem;
+}
+
+.sub-heading {
+  font-family: "Lexend", sans-serif;
+  font-size: 1rem;
+  color: var(--main-paragraph-text-color);
+}
+
+.stats {
+  margin-top: 4.7rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.stat-heading {
+  color: var(--main-heading-text-color);
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+@media screen and (max-width: 1145px) {
+  .card-image {
+    background-image: url("./images/image-header-mobile.jpg");
+    min-height: 450px;
+    background-size: cover;
+    order: -1;
+  }
+  .main {
+    padding: 2rem;
+    height: 100%;
+  }
+  .attribution {
+    flex-direction: column;
+    height: 100%;
+  }
+  .stats {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .main-heading {
+    text-align: center;
+  }
+
+  .paragraph {
+    text-align: center;
+  }
+}
