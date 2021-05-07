@@ -21,10 +21,12 @@ body {
 
 .card {
   color: var(--clir-neutral-100);
-  background-image: url("https://i.pinimg.com/originals/b8/80/1b/b8801b9b67e169a7c46a5a4f2a9eb05f.jpg");
+  background-image: url("https://i.pinimg.com/originals/b8/80/1b/b8801b9b67e169a7c46a5a4f2a9eb05f.jpg"),
+    linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8));
   background-size: cover;
   padding: 10rem 0 0;
-  /* investigate ch unit */
+  /* background-color: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)); */
+  background-blend-mode: multiply;
   max-width: 35ch;
   border-radius: 0.5rem;
   overflow: hidden;
