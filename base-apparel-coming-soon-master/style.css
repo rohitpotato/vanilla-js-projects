@@ -133,7 +133,7 @@ body {
 
   .image {
     grid-area: image;
-    background: red url(./images/hero-mobile.jpg) no-repeat;
+    background: url(./images/hero-mobile.jpg) no-repeat;
     background-size: cover;
   }
 
