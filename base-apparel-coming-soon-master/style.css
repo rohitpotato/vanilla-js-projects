@@ -48,7 +48,7 @@ body {
 }
 
 .heading {
-  font-size: clamp(2rem, 10vh, 4rem);
+  font-size: clamp(2rem, 8vh, 3rem);
   text-transform: uppercase;
   font-weight: 300;
   color: var(--desaturated-red);
