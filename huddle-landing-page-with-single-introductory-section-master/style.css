@@ -42,7 +42,7 @@ body {
   gap: 2rem;
   place-items: center;
   grid-column: span 3;
-  padding: 2rem;
+  padding: 2rem 4rem 2rem 2rem;
 }
 
 .heading span {
