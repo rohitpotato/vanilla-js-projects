@@ -1,0 +1,143 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+}
+
+body {
+  min-height: 100vh;
+  background: var(--violet) url("./images/bg-desktop.svg") no-repeat;
+  background-size: cover;
+}
+
+.container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "content content"
+    "footer footer";
+  /* grid-template-columns: 1fr 1fr; */
+  grid-template-rows: auto 1fr auto;
+}
+
+.header {
+  grid-area: header;
+  padding: 3% 0 0 3%;
+  grid-column: span 3;
+}
+
+.content {
+  width: 100%;
+  grid-area: content;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 2rem;
+  place-items: center;
+  grid-column: span 3;
+  padding: 2rem;
+}
+
+.heading span {
+  color: white;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.description span {
+  display: block;
+  margin: 1.5rem 0 1rem 0;
+  font-family: "Open sans", sans-serif;
+  font-weight: 400;
+  color: white;
+  line-height: 1.5;
+}
+
+.btn {
+  border: 0;
+  padding: 1rem 20%;
+  color: var(--violet);
+  background: white;
+  font-family: "Open sans", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 2rem;
+  cursor: pointer;
+  box-shadow: 1px 1px 12px 0px rgba(0, 0, 0, 0.58);
+  -webkit-box-shadow: 1px 1px 12px 0px rgba(0, 0, 0, 0.58);
+  -moz-box-shadow: 1px 1px 12px 0px rgba(0, 0, 0, 0.58);
+}
+
+.btn:hover {
+  transition: all 0.2s ease-in;
+  background: var(--soft-magenta);
+  color: white;
+}
+
+.image-container {
+  background: url(./images/illustration-mockups.svg) no-repeat center;
+  background-size: contain;
+  height: 100%;
+  width: 100%;
+}
+
+.footer {
+  grid-area: footer;
+  grid-column: -1;
+}
+
+.footer-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 0 3rem 3rem 0;
+}
+
+.footer-icon {
+  display: block;
+  height: 3rem;
+  width: 3rem;
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+  border: 1px solid white;
+  padding: 1rem;
+}
+
+i[class*="fa-"] {
+  color: white;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    grid-template-areas:
+      "header"
+      "content"
+      "footer";
+    gap: 2rem;
+    width: 100%;
+    place-content: center;
+    padding: 1.5rem;
+    padding: 0;
+  }
+  .content {
+    grid-template-columns: 2fr;
+    grid-template-rows: 0.5fr 1fr;
+    place-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .footer-icons {
+    padding: 0;
+  }
+}
