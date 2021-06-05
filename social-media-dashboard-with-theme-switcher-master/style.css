@@ -79,12 +79,16 @@ button {
 }
 
 .container {
-  width: 80%;
-  margin: 0 auto;
+  /* width: 80%; */
 }
 
 header {
   background: var(--background-top);
+}
+
+header > div {
+  width: 80%;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -132,6 +136,11 @@ header {
 
 #toggle:checked + label .toggle-button::before {
   left: 50%;
+}
+
+.content-container {
+  width: 80%;
+  margin: -60px auto;
 }
 
 .main-cards {
