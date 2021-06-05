@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Frontend Mentor | [Challenge Name Here]</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <!--  Dark Mode @nathanf 1987
+    Followers 12 Today @nathanf 1044 Followers 99 Today @realnathanf 11k
+    Followers 1099 Today Nathan F. 8239 Subscribers 144 Today Overview - Today
+    Page Views 87 3% Likes 52 2% Likes 5462 2257% Profile Views 52k 1375%
+    Retweets 117 303% Likes 507 553% Likes 107 19% Total Views 1407 12% -->
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+
+    <div class="container">
+      <header>
+        <div class="heading">
+          <h3>Social Media Dashboard</h3>
+          <span>Total Followers: 23,004</span>
+        </div>
+        <div class="toggle-container">
+          <input type="checkbox" id="toggle" />
+          <label for="toggle">
+            <div class="toggle-button"></div>
+          </label>
+        </div>
+      </header>
+      <div class="main-cards">
+        <div class="main-card">
+          <div class="top-b facebook-b"></div>
+          <div class="social">
+            <span>
+              <img src="./images/icon-facebook.svg" alt="" />
+            </span>
+            <span class="dark-text username"> @nathanf </span>
+          </div>
+          <div class="followers">
+            <span>1987</span>
+            <span class="dark-text">FOLLOWERS</span>
+          </div>
+          <div class="main-stats positve">
+            <span>
+              <img src="./images/icon-up.svg" alt="" />
+            </span>
+            <span> 12 Today </span>
+          </div>
+        </div>
+
+        <div class="main-card">
+          <div class="top-b twitter-b"></div>
+          <div class="social">
+            <span>
+              <img src="./images/icon-facebook.svg" alt="" />
+            </span>
+            <span class="dark-text username"> @nathanf </span>
+          </div>
+          <div class="followers">
+            <span>1044</span>
+            <span class="dark-text">FOLLOWERS</span>
+          </div>
+          <div class="main-stats positive">
+            <span>
+              <img src="./images/icon-up.svg" alt="" />
+            </span>
+            <span> 99 Today </span>
+          </div>
+        </div>
+
+        <div class="main-card">
+          <div class="top-b instagram-b"></div>
+          <div class="social">
+            <span>
+              <img src="./images/icon-facebook.svg" alt="" />
+            </span>
+            <span class="dark-text username"> @realnathanf </span>
+          </div>
+          <div class="followers">
+            <span>8239</span>
+            <span class="dark-text">FOLLOWERS</span>
+          </div>
+          <div class="main-stats negative">
+            <span>
+              <img src="./images/icon-down.svg" alt="" />
+            </span>
+            <span> 144 Today </span>
+          </div>
+        </div>
+
+        <div class="main-card">
+          <div class="top-b youtube-b"></div>
+          <div class="social">
+            <span>
+              <img src="./images/icon-facebook.svg" alt="" />
+            </span>
+            <span class="dark-text username"> Nathan.F </span>
+          </div>
+          <div class="followers">
+            <span>11k</span>
+            <span class="dark-text">FOLLOWERS</span>
+          </div>
+          <div class="main-stats positive">
+            <span>
+              <img src="./images/icon-up.svg" alt="" />
+            </span>
+            <span> 1099 Today </span>
+          </div>
+        </div>
+      </div>
+
+      <h1 class="overview-heading">Overview</h1>
+      <div class="overview-cards">
+        <div class="overview-card">
+          <div class="stat-1">
+            <span class="dark-text">Page Views</span>
+            <span>
+              <img src="./images/icon-facebook.svg" alt="" />
+            </span>
+          </div>
+          <div class="stat-2">
+            <span>87</span>
+            <div class="main-stats positive">
+              <span>
+                <img src="./images/icon-up.svg" alt="" />
+              </span>
+              <span> 3% </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="overview-card">
+          <div class="stat-1">
+            <span class="dark-text">Likes</span>
+            <span>
+              <img src="./images/icon-facebook.svg" alt="" />
+            </span>
+          </div>
+          <div class="stat-2">
+            <span>87</span>
+            <div class="main-stats negative">
+              <span>
+                <img src="./images/icon-down.svg" alt="" />
+              </span>
+              <span> 2% </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="overview-card">
+          <div class="stat-1">
+            <span class="dark-text">Likes</span>
+            <span>
+              <img src="./images/icon-instagram.svg" alt="" />
+            </span>
+          </div>
+          <div class="stat-2">
+            <span>87</span>
+            <div class="main-stats positive">
+              <span>
+                <img src="./images/icon-up.svg" alt="" />
+              </span>
+              <span> 2257% </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="overview-card">
+          <div class="stat-1">
+            <span class="dark-text">Profile Views</span>
+            <span>
+              <img src="./images/icon-instagram.svg" alt="" />
+            </span>
+          </div>
+          <div class="stat-2">
+            <span>87</span>
+            <div class="main-stats positive">
+              <span>
+                <img src="./images/icon-up.svg" alt="" />
+              </span>
+              <span> 1375% </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="overview-card">
+          <div class="stat-1">
+            <span class="dark-text">Retweets</span>
+            <span>
+              <img src="./images/icon-twitter.svg" alt="" />
+            </span>
+          </div>
+          <div class="stat-2">
+            <span>117</span>
+            <div class="main-stats positive">
+              <span>
+                <img src="./images/icon-up.svg" alt="" />
+              </span>
+              <span> 303% </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="overview-card">
+          <div class="stat-1">
+            <span class="dark-text">Likes</span>
+            <span>
+              <img src="./images/icon-twitter.svg" alt="" />
+            </span>
+          </div>
+          <div class="stat-2">
+            <span>507</span>
+            <div class="main-stats positive">
+              <span>
+                <img src="./images/icon-up.svg" alt="" />
+              </span>
+              <span> 563% </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="overview-card">
+          <div class="stat-1">
+            <span class="dark-text">Likes</span>
+            <span>
+              <img src="./images/icon-youtube.svg" alt="" />
+            </span>
+          </div>
+          <div class="stat-2">
+            <span>107</span>
+            <div class="main-stats negative">
+              <span>
+                <img src="./images/icon-down.svg" alt="" />
+              </span>
+              <span> 19% </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="overview-card">
+          <div class="stat-1">
+            <span class="dark-text">Total Views</span>
+            <span>
+              <img src="./images/icon-youtube.svg" alt="" />
+            </span>
+          </div>
+          <div class="stat-2">
+            <span>1407</span>
+            <div class="main-stats negative">
+              <span>
+                <img src="./images/icon-down.svg" alt="" />
+              </span>
+              <span> 12% </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js" type="text/javascript" />
+  </body>
+</html>
