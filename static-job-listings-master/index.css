@@ -1,0 +1,225 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  --light-gray-cyan: hsl(180, 52%, 96%);
+  --light-gray-cyan-card: hsl(180, 31%, 95%);
+  --dark-gray-cyan: hsl(180, 8%, 52%);
+  --very-dark-gray-cyan: hsl(180, 14%, 20%);
+  --desaturated-dark-cyan: hsl(180, 29%, 50%);
+  min-height: 100vh;
+  background-color: var(--light-gray-cyan);
+  font-family: "Spartan", sans-serif;
+}
+
+.flex {
+  display: flex;
+}
+
+header {
+  height: 12vh;
+  background: url(./images/bg-header-desktop.svg), var(--desaturated-dark-cyan);
+  background-size: contain;
+  background-repeat: repeat-x;
+  position: relative;
+  display: flex;
+}
+
+.search-bar {
+  /* width: 80%;
+  margin: 0 auto; */
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: -20%;
+  left: 10%;
+  right: 10%;
+  /* margin-bottom: -2.5rem; */
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 0.25rem;
+  font-style: italic;
+  border: 0;
+  outline: none;
+  font-weight: 700;
+  box-shadow: 10px 10px 124px -74px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 124px -74px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 124px -74px rgba(0, 0, 0, 0.75);
+}
+
+.search-bar input:focus {
+  border: 1px solid var(--dark-gray-cyan);
+}
+
+.search-bar .selected-tags {
+  /* margin-top: 1rem; */
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.remove-tag {
+  margin-left: 1rem;
+}
+
+.selected-tags {
+  margin: 2rem auto;
+  padding: 1rem 0;
+  width: 80%;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: white;
+  border-radius: 0.5rem;
+}
+
+.cards-container {
+  padding: 1rem 0;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.cards-container > * {
+  margin-bottom: 1rem;
+}
+
+.card-container {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  position: relative;
+  border-radius: 8px;
+  /* overflow: hidden; */
+}
+
+.featured-border {
+  /* display: hidden; */
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background-color: var(--desaturated-dark-cyan);
+}
+
+.featured-border.show {
+  display: block;
+}
+
+.card-info {
+  flex-direction: column;
+  margin-left: 1.5rem;
+}
+
+.card-info-top {
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+
+.card-info-top > .name {
+  color: var(--desaturated-dark-cyan);
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-right: 1rem;
+}
+
+.card-info-top > .new {
+  color: #ffffff;
+  background-color: var(--desaturated-dark-cyan);
+  border-radius: 1.5rem;
+  padding: 0.35rem 0.8rem;
+  margin-right: 0.4rem;
+  font-weight: 700;
+  font-size: 0.6rem;
+}
+
+.card-info-top > .featured {
+  color: #ffffff;
+  background-color: var(--very-dark-gray-cyan);
+  border-radius: 1.5rem;
+  padding: 0.35rem 0.8rem;
+  font-weight: 700;
+  font-size: 0.6rem;
+}
+
+.card-info-name {
+  color: var(--very-dark-gray-cyan);
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-weight: 700;
+}
+
+.card-info-stats {
+  margin-top: 0.7rem;
+  opacity: 0.5;
+}
+
+.card-info-stats > * {
+  margin-right: 1rem;
+  font-size: 0.85rem;
+}
+
+.card-tags {
+  margin-left: auto;
+  flex-wrap: wrap;
+  align-self: center;
+}
+
+.tag-container {
+  color: var(--desaturated-dark-cyan);
+  background: var(--light-gray-cyan-card);
+  height: max-content;
+  padding: 0.7rem;
+  margin: 4px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: 0;
+}
+
+@media screen and (max-width: 900px) {
+  .cards-container {
+    width: 90%;
+  }
+  .card-container {
+    flex-direction: column;
+  }
+  .card-tags {
+    margin-left: unset;
+    align-self: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .card-image {
+    position: absolute;
+    top: -10%;
+  }
+  .card-image > img {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+  }
+  .card-info {
+    margin-top: 1rem;
+    margin-left: 0;
+  }
+  .selected-tags {
+    width: 90%;
+  }
+
+  .search-bar {
+    left: 5%;
+    right: 5%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  header {
+    background: url(./images/bg-header-mobile.svg), var(--desaturated-dark-cyan);
+  }
+}
